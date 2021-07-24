@@ -1,0 +1,46 @@
+data
+20
+  0.0   0.0 P1	// A point at location (0,0) with name “P1”.
+100.0   0.0 P2	// A point at location (100,0).
+100.0 100.0 P3
+  0.0 100.0 P4
+ 50.0  50.0 P5
+ 66.0   6.8 P6
+P1 P2 L12 // A line from P1 to P2.
+P2 P3 L23
+P3 P4 L34
+P3 P5 L35
+P4 P1 L41
+P5 P4 L54
+P6 P5 L65
+P5 P1 L51
+P6 P1 L61
+P1 P2 P3 P4 P5 PG1     // A polygon with vertices P1, P2, P3 and P4.
+P1 P2 P5 PG3
+L12 L23 L35 L51 PG4
+L12 L23 L34 L41 PG2 // A polygon with edges L12, L23, L34 and L41.
+P6 P4 L64
+
+actions
+outputs.txt
+20
+Distance P1 P2 // Prints the distance between P1 and P2.
+Distance P5 P6
+Distance P3 L12
+Distance P1 L12
+Angle L65 L54
+Distance P1 L54
+Distance P6 L61
+Angle L12 L23
+Angle L12 L34
+Angle L54 L34
+Length PG1
+Length L51
+Length L64
+Length PG3
+Area PG2
+Area PG1
+Area PG3
+Length PG2
+Area PG4
+Length PG4
